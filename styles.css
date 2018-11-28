@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cuprum|Montserrat');
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	overflow: hidden;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-family: 'Cuprum', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+span{
+	color: #3d3d3d;
+	font-size: 3.5rem;
+}
+
+#wrapper{
+	display: flex;
+	flex-direction: row;
+}
+
+#left{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color: #bed4c5;
+	height: 100vh;
+}
+
+#right{
+	flex: 5;
+	background-color: #ddecdc;
+}
+
+#userPic{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 7vh
+}
+
+#userContentPic{
+	width: 40%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 1vh;
+}
+
+#userName{
+	text-align: center;
+	margin: inherit;
+	margin-top: 2%;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+#userType{
+	text-align: center;
+	margin: inherit;
+	font-size: 1rem;
+	margin-top: 1%;
+}
+
+#logo{
+	margin-left: 2%;
+	margin-top: 3vh;
+	color: #5a5a5a;
+}
+
+/* Data Table Frame */
+
+#frame{
+	border-radius: 3px;
+	border-bottom: 2px solid #ccc;
+	margin-top: 8vh;
+	margin-left: 10%;
+	background-color: #ddd;
+	width: 80%;
+	transition: all 0.8s;
+}
+
+#frameContent{
+	background-color: white;
+	height: 50vh;
+	width: auto;
+	overflow-y: auto;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#frame:hover{
+    box-shadow:
+	1px 1px #53a7ea,
+	2px 2px #53a7ea,
+	3px 3px #53a7ea;
+	-webkit-transform: translateX(-3px);
+	transform: translateX(-3px);
+}
+
+.dataFrame{
+	background-color: #5a5a5a;
+	width: 100%;
+	height: 18vh;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.nameSection{
+	height: 100%;
+	width: 25%;
+	background-color: #f7f7f7;
+}
+
+.nameSection p{
+	margin: 0;
+	text-align: center;
+}
+
+.date{
+	font-size: .8rem;
+}
+
+.descSection{
+	height: 100%;
+	width: 80%;
+	background-color: #f3f3f3;
+	overflow-y: auto;
+}
+
+.descSection h2{
+	margin: 0;
+	font-weight: 100;
+
+}
+
+.descSection p{
+	font-size: 90%;
+	text-align: left;
+	padding-right: 14%;
+}
+
+.categorySection{
+	height: 100%;
+	width: 20%;
+	background-color: #f3f3f3;
+}
+
+.categoryLabel{
+	font-family: 'Cuprum', sans-serif;
+	font-weight: 100;
+	padding-right: 2%;
+	padding-left: 2%;
+	color: #de7874;
+}
+
+/* Dropdown Menu */
+
+.dropDownBtn {
+    background-color: #df7874;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropContent a:hover {background-color: #f1f1f1}
+
+.dropDown:hover .dropContent {
+    display: block;
+}
+
+.dropDown:hover .dropDownBtn {
+    background-color: #53a7ea;
+}
+
+.arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Data Table Frame End */
+
+/* Navigation */
+
+#nav{
+	margin-top: 6.5vh;
+	height: 100vh;
+}
+
+.navButton{
+	display: block;
+	border-width: 2px;
+	border-right: none !important;
+	border-left: none !important;
+	border-style: solid;
+	border-color: #ddecdc;
+	background: #3d3d3d;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.8s;
+	width: 100%;
+	height: 10vh;
+	font-size: 2rem;
+	font-weight: 100;
+}
+
+.navButton:hover{
+	background-color: #df7874;
+}
+
+#signOutBtn{
+	padding-bottom: 100vh;
+	padding-top: 6vh;
+}
+
+/* Navigation END */
