@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Profile</title>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<div id="left">
+		<img src="userlogo.png" id="userPic" /> <!-- Can alter the picture for Faculty, or we can add images to our Database (stretch goal) -->
+		<p id="userName">Mikhail Chebotar</p> <!-- Dynamically place Username from JSON -->
+		<p id="userType">Student</p> <!-- Dynamically place User Type from JSON -->
+		<div id="nav">
+			<a href="homepage.html"><button class="navButton">Home</button></a>
+			<a href="#"><button class="navButton">Research</button></a>
+			<a href="login.html"><button class="navButton" id="signOutBtn">Sign Out</button></a>
+		</div>
+	</div>
+	<div id="right">
+		<h1 id="settingLogo"><span>RIT</span> Research Search</h1>
+		<h1 id="settingTitle"><span>Profile</span></h1>
+
+		<div id=settingContent>
+			<div id="paragraph">
+				<p id="availability">Availability</p>
+			</div>
+			<div id="onButtonDiv">
+				<button id="onBtn" onclick="toggleBtn(this)">Yes</button>
+			</div>
+			<div id="offButtonDiv">
+				<button id="offBtn" onclick="toggleBtn(this)">No</button>
+			</div>
+		</div>
+
+		<div id="interestContent">
+			<p>Preferred Research Interest</p>
+
+			<div id="radioBorderContainer"> <!-- Send query depending on radio button choice -->
+				<label class="radioContainer">Math
+					<input type="radio" checked="checked" name="radio"> <!-- Set default check from Json data -->
+					<span class="customRadio"></span>
+				</label>
+				<label class="radioContainer">Science
+					<input type="radio" name="radio">
+					<span class="customRadio"></span>
+				</label>
+				<label class="radioContainer">General
+					<input type="radio" name="radio">
+					<span class="customRadio"></span>
+				</label>
+			</div>
+		</div>
+
+		<div id="descContent">
+			<p>Description</p>
+			<form  id="descForm" action="">
+				<textarea id="desc" name="desc" placeholder="Tell us a little something about yourself.." style="height:200px"></textarea>
+				<input id="descSubmit" type="submit" value="Submit">
+			</form>
+		</div>
+
+	</div>
+</div>
+
+</body>
+
+<script>
+	var initial = true; //checking for default state of availability button
+
+	function toggleBtn(item){ //change logic to json availability returned data later
+		var on = document.getElementById("onBtn");
+		var off = document.getElementById("offBtn");
+
+		if(item.id === "offBtn"){
+			on.style.backgroundColor = "#5a5a5a";
+			off.style.backgroundColor = "#df7874";
+			initial = false; 
+		}
+		else if(item.id === "onBtn" && initial === false){
+			on.style.backgroundColor = "#df7874";
+			off.style.backgroundColor = "#5a5a5a";
+		}
+	}
+
+</script>

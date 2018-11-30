@@ -6,7 +6,7 @@
 }
 
 body{
-	overflow: hidden;
+	overflow: auto;
 	background-color: white;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -76,6 +76,122 @@ span{
 	color: #5a5a5a;
 }
 
+#researchHeaderWrapper{
+	padding-bottom: 8vh;
+}
+
+#settingLogo{
+	float: left;
+	margin-left: 2%;
+	color: #5a5a5a;
+}
+
+#settingTitle{
+	float: right;
+	margin-right: 5%;
+}
+
+#settingContent{
+	margin-top: 20vh;
+	margin-right: 30%;
+	margin-left: 10%;
+	display: flex;
+	flex-direction: row;
+	border-color: #3d3d3d;
+	border-width: 1px;
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+}
+
+#availability{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#paragraph{
+	flex: 3;
+}
+
+#onButtonDiv{
+	flex: 2;
+}
+
+#offButtonDiv{
+	flex: 2;
+}
+
+#onButtonDiv button{
+	background-color: #df7874;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+#offButtonDiv button{
+	background-color: #5a5a5a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+#onButtonDiv button:hover{
+	background-color: #53a7ea;
+}
+
+#offButtonDiv button:hover{
+	background-color: #53a7ea;
+}
+
+#descContent{
+	margin-left: 10%;
+}
+
+#descContent p{
+	font-size: 120%;
+	border-width: 1px;
+    border-color: #3d3d3d;
+    border-style: solid;
+    padding-bottom: 1%;
+    margin-right: 95vh;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#descSubmit{
+	display: list-item;
+	background-color: #3d3d3d;
+	color: white;
+	padding: 10px 15px;
+	margin-top: .5%;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+#descSubmit:hover{
+	background-color:#53a7ea;
+}
+
+#desc{
+	height: 10vh;
+	width: 33%;
+}
+
 /* Data Table Frame */
 
 #frame{
@@ -85,7 +201,7 @@ span{
 	margin-left: 10%;
 	background-color: #ddd;
 	width: 80%;
-	transition: all 0.8s;
+	transition: all 0.9s;
 }
 
 #frameContent{
@@ -142,7 +258,6 @@ span{
 .descSection h2{
 	margin: 0;
 	font-weight: 100;
-
 }
 
 .descSection p{
@@ -164,6 +279,99 @@ span{
 	padding-left: 2%;
 	color: #de7874;
 }
+
+#interestContent{
+	margin-left: 10%;
+	margin-top: 6%;
+}
+
+#interestContent p{
+	font-size: 120%;
+
+}
+
+/* Radio Buttons */
+
+/* Customize the label (the container) */
+.radioContainer {
+  display: block;
+  position: relative;
+  padding-left: 2.3rem;
+  margin-bottom: 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.customRadio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .customRadio {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .customRadio {
+  background-color: #5a5a5a;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.customRadio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .customRadio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .customRadio:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+#radioBorderContainer{
+	border-width: 1px;
+	border-color: #3d3d3d;
+	border-style: solid;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-right: 95vh;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+
+/* Radio Button End */
+
 
 /* Dropdown Menu */
 
@@ -219,11 +427,186 @@ span{
 
 /* Data Table Frame End */
 
+/* Research Page */
+
+.researchDataFrame{
+	background-color: #f7f7f7;
+	width: 100%;
+	height: 8vh;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.researchNameSection{
+	flex: 3;
+}
+
+.researchNameSection h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	margin: 0;
+	padding-top: 2%;
+	padding-left: 1%;
+	color: #3d3d3d;
+}
+
+.researchInfoSection{
+	flex: 1;
+}
+
+.researchInfoSection button{
+	background-color: #df7874;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 80%;
+    width: 70%;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+
+.researchInfoSection button:hover{
+	background-color: #53a7ea;
+}
+
+/* Research Page End */
+
+/* Login Page */
+
+.emptySpace{
+	flex: 1;
+	background-color: #ddecdc;
+}
+
+#loginContainer{
+	background-color: #bed4c5;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	transition: all 0.9s;
+}
+
+#loginContainer:hover{
+    box-shadow:
+	1px 1px #53a7ea,
+	2px 2px #53a7ea,
+	3px 3px #53a7ea;
+	-webkit-transform: translateX(-3px);
+	transform: translateX(-3px);
+}
+
+
+#signIn{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	padding-bottom: 1rem;
+}
+
+#signIn form{
+	width: 80%;
+	padding-bottom: 3rem;
+}
+
+#signIn .logo{
+	margin-bottom: 8vh;
+}
+
+#signIn .intro{
+	width: 80%;
+	font-size: .9rem;
+	color: #5f5c5c;
+}
+
+#signIn .intro a{
+	text-decoration: none;
+	color: #df7874;
+}
+
+
+#signIn label {
+	font-size: 0.9rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+#signIn .text-input{
+	margin-bottom: 1.3rem;
+	width: 100%;
+	border-radius: 2px;
+	background: #fdfbfb;
+	border: 1px solid #d8d8d8;
+	color: #5f5c5c;
+	padding: 0.5rem 1rem;
+	line-height: 1.3rem;
+}
+
+#loginLogo{
+	margin-top: 3vh;
+	color: #5a5a5a;
+}
+
+
+
+/* Button */
+.primary-btn {
+	padding: 0.7rem 1rem;
+	height: 2.7rem;
+	display: block;
+	border: 0;
+	border-radius: 2px;
+	font-weight: 500;
+	background: #df7874;
+	color: #fdfbfb;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.8s;
+}
+
+#signIn .primary-btn {
+	width: 100%;
+}
+
+.primary-btn:hover {
+	background-color: #3d3d3d;
+}
+
+
+#loginFooter{
+	color: #847b7b;
+	text-align: center;
+	font-size: 0.8rem;
+	max-width: 80%;
+	padding-top: 5rem;
+}
+
+#loginFooter a{
+	color: #f96816;
+	text-decoration-color: underline;
+}
+
+
+/* Login Page End */
+
 /* Navigation */
 
 #nav{
 	margin-top: 6.5vh;
 	height: 100vh;
+}
+
+a{
+	text-decoration: none;
 }
 
 .navButton{
@@ -249,9 +632,9 @@ span{
 	background-color: #df7874;
 }
 
-#signOutBtn{
+/*#signOutBtn{
 	padding-bottom: 100vh;
 	padding-top: 6vh;
-}
+}*/
 
 /* Navigation END */

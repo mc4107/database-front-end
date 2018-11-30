@@ -9,11 +9,9 @@
 	<link rel="stylesheet" href="jquery.fancybox.min.css" />
 	<script src="jquery.fancybox.min.js"></script>
 
-
-
 	<link rel="stylesheet" href="styles.css">
 
-	<title>Project Homepage</title>
+	<title>Research</title>
 </head>
 
 <body>
@@ -24,13 +22,16 @@
 		<p id="userName">Mikhail Chebotar</p> <!-- Dynamically place Username from JSON -->
 		<p id="userType">Student</p> <!-- Dynamically place User Type from JSON -->
 		<div id="nav">
+			<a href="homepage.html"><button class="navButton">Home</button></a>
 			<a href="settings.html"><button class="navButton">Profile</button></a>
-			<a href="#"><button class="navButton">Research</button></a>
 			<a href="login.html"><button class="navButton" id="signOutBtn">Sign Out</button></a>
 		</div>
 	</div>
 	<div id="right">
-		<h1 id="logo"><span>RIT</span> Research Search</h1>
+		<div id ="researchHeaderWrapper">
+			<h1 id="settingLogo"><span>RIT</span> Research Search</h1>
+			<h1 id="settingTitle"><span>Research</span></h1>
+		</div>
 		<div id="frame">
 			<div class="dropDown">
 				<button class="dropDownBtn">Category <div class="arrow"/></button>
@@ -49,18 +50,12 @@
 				</div>
 			</div>
 			<div id="frameContent">
-				<div class="dataFrame"> <!-- Dynamically section Area from JSON. Number of copies will vary depending on query -->
-					<div class="nameSection">
-						<img src="facultylogo.png" id="userContentPic" />
-						<p>Michael Floeser</p>
-						<p class="date">Date: 03.27.1018</p>
+				<div class="researchDataFrame"> <!-- Dynamically section Area from JSON. Number of copies will vary depending on query -->
+					<div class="researchNameSection">
+						<h1>Database Login System</h1>
 					</div>
-					<div class="descSection">
-						<h2>Database Login System</h2>
-						<p><b>Description</b>: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel suscipit nisi. Sed cursus velit tincidunt arcu finibus, ac varius quam vehicula. Sed vel purus urna. Quisque et nibh eu odio volutpat consectetur. Etiam interdum augue et tortor varius congue. In ac laoreet leo, cursus gravida nisi. Praesent volutpat egestas tincidunt. Nullam pharetra, dolor consequat pellentesque sodales, erat lacus rutrum eros, at eleifend enim risus id neque. Nunc hendrerit laoreet tellus, et accumsan nisi dignissim et. Integer ut dapibus nisl, nec hendrerit lectus. Aliquam aliquam lorem quis purus varius, eu rhoncus odio dignissim. Integer dignissim rutrum dictum.</p>
-					</div>
-					<div class="categorySection">
-						<p class="categoryLabel">Science</p>
+					<div class="researchInfoSection">
+						<button class="infoBtn">Info</button>
 					</div>
 				</div> <!-- End Dynamic dataFrame -->
 				<div id="#divForm" style="display:none">
