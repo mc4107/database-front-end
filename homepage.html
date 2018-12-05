@@ -24,8 +24,9 @@
 		<p id="userName">Mikhail Chebotar</p> <!-- Dynamically place Username from JSON -->
 		<p id="userType">Student</p> <!-- Dynamically place User Type from JSON -->
 		<div id="nav">
+			<a href="homepage.html"><button class="navButton">Home</button></a>
 			<a href="settings.html"><button class="navButton">Profile</button></a>
-			<a href="#"><button class="navButton">Research</button></a>
+			<a href="research.html"><button class="navButton">Research</button></a>
 			<a href="login.html"><button class="navButton" id="signOutBtn">Sign Out</button></a>
 		</div>
 	</div>
@@ -35,17 +36,17 @@
 			<div class="dropDown">
 				<button class="dropDownBtn">Category <div class="arrow"/></button>
 				<div class="dropContent">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
+					<a href="#">Math</a>
+					<a href="#">Science</a>
+					<a href="#">General</a>
 				</div>
 			</div>
 			<div class="dropDown">
 				<button class="dropDownBtn">Professor <div class="arrow"/></button>
 				<div class="dropContent">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
+					<a href="#">Michael Floeser</a>
+					<a href="#">Daniel Bogaard</a>
+					<a href="#">Bryan French</a>
 				</div>
 			</div>
 			<div id="frameContent">
@@ -63,8 +64,17 @@
 						<p class="categoryLabel">Science</p>
 					</div>
 				</div> <!-- End Dynamic dataFrame -->
-				<div id="#divForm" style="display:none">
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Database Login System</h2>
+				<div id="btnDiv">
+					<button class="modalBtn">Request</button>
+					<button class="modalBtn">Exit</button>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -74,32 +84,26 @@
 $(document).ready(function(){
 	$('.categoryLabel').scalem();
 
-	$('.dataFrame').on('click', function(){
-		console.log(this);
-		//alert("hello");
-	});
+	var modal = document.getElementById('myModal');
+	var frame = document.getElementsByClassName("dataFrame")[0]; //We'll need to dynamically update this array value
+	var span = document.getElementsByClassName("close")[0];
 
-	/* This is basic - uses default settings */
-	
-	// $(".dataFrame").fancybox();
-	
-	// /* Using custom settings */
-	
-	// $("a#inline").fancybox({
-	// 	'hideOnContentClick': true
-	// });
+	frame.onclick = function() {
+	    modal.style.display = "block";
+	}
 
-	/* Apply fancybox to multiple items */
-	
-	$(".dataFrame").fancybox({
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	false
-	});
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
 });
 </script>
+
 </body>
 
 </html>

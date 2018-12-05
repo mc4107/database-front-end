@@ -477,10 +477,49 @@ span{
 
 /* Login Page */
 
-.emptySpace{
-	flex: 1;
-	background-color: #ddecdc;
+.emptySpace1{
+	flex: .5;
+	background-color: #bed4c5;
+/*	background-image: url('bg1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	filter:blur(1px);*/
 }
+
+/*.emptySpace1:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(118, 125, 117, 0.5);
+}*/
+
+.emptySpace2{
+	flex: .5;
+	background-color: #bed4c5;
+/*	background-image: url('bg4.jpg');
+	background-size: cover;
+	position: relative;
+	filter:blur(1px);
+*/}
+
+/*.emptySpace2:after {
+  content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(118, 125, 117, 0.5);
+}
+*/
 
 #loginContainer{
 	background-color: #bed4c5;
@@ -498,8 +537,8 @@ span{
 	1px 1px #53a7ea,
 	2px 2px #53a7ea,
 	3px 3px #53a7ea;
-	-webkit-transform: translateX(-3px);
-	transform: translateX(-3px);
+	-webkit-transform: translateX(10px 0-3px);
+	transform: translateX(-10px);
 }
 
 
@@ -638,3 +677,77 @@ a{
 }*/
 
 /* Navigation END */
+
+/* Modal Window */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    text-align: center;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    display: inline-block;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 30%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#btnDiv{
+	display: flex;
+}
+
+#btnDiv p{
+	margin-top: 2vh;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.modalBtn {
+	background-color: #df7874;
+	color: white;
+	padding: 16px;
+	margin-left: 15%;
+	margin-top: 2vh;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.modalBtn:hover {
+    background-color: #53a7ea;
+}
+
+
+/* Modal Window End 
